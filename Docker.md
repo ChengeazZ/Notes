@@ -19,6 +19,8 @@
  COPY . /app        #copy all to (if not exits creates) /app in container
  WORKDIR /app       # telling working folder
  CMD python main.py # what command and which file
+
+**Explanations: Copies all from python:alpine container(all kind of containers exist in Dockerhub and it copies from there) to my container
 ```
 
 
