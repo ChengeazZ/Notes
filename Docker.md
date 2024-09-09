@@ -20,7 +20,7 @@
  WORKDIR /app       # telling working folder
  CMD python main.py # what command and which file
 
-**Explanations: Copies all from python:alpine container(all kind of containers exist in Dockerhub and it copies from there) to my container
+**Explanations: FROM - Brings all from python:alpine container(all kind of containers exist in Dockerhub and it copies from there) to my container so container has OS and Language
 ```
 
 
