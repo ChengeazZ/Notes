@@ -31,11 +31,12 @@
  ENTRYPOINT ["python"]
  CMD ["main.py"]  # you cant overwrite entrypoint but cmd can ("main2.py" etc)
  
- 
- 
-
 **Explanations: FROM - Brings all from python:alpine container(all kind of containers exist in Dockerhub and it copies from there) to my container so container has OS and Language
 ```
+## VOLUMES
+ Docker volume is like an external storage space where you can save data from your container so that it doesn’t get lost when the container stops or is deleted. Containers themselves are temporary, and once they stop or are removed, all data inside them usually disappears. You can use same volume data(lets say it has data base) among couple containers.
+ You can also use Volume to change container. If you change something in volume the container binded tp this will also change. So instead building cotainer every time , you can do this.
+ Volumes can be Binded or just Named. Binded when you choose folder to become volume and store data where in Named Docker itself creates folder somwhere. So better use Binded.
 
 
 ## BUILDING CONTAINER
@@ -52,7 +53,16 @@ docker image ls # Shows all images , and image id on machine
 docker ps # Shows running containers add flag -a to see all containers
 docker run my_container # runs IMAGE and creates CONTAINER . Runs CMD command
 docker run -it my_container /bin/bash # overwrites CMD and opens Linux bash for manually using terminal inside container
+docker container prune # to remove all non-running container
+docker image prune # to remove all dangling images 
 ```
+
+## Dockerhub
+To be able to interact you need to login
+```Bash
+Docker login
+```
+
 
 ## LINUX DISTROS (MOST COMMON)
 * **UBUNTU**
