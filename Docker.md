@@ -57,6 +57,10 @@ docker container prune # to remove all non-running container
 docker image prune # to remove all dangling images 
 ```
 
+## Dockercompose
+
+## Volume
+
 ## Dockerhub
 To be able to interact you need to login
 ```Bash
