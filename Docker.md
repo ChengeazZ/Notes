@@ -19,11 +19,18 @@
  FROM Python:alpine #which language : which linux
  COPY . /app        #copy all to (if not exits creates) /app in container
  WORKDIR /app       # telling working folder
- CMD python main.py # what command and which file
+ CMD python main.py # what command and which file - always last line
  **Arguments
  ENV name "Chingiz" # give environmental variable to container
  VOLUME ["/path/in/container"] #
  EXPOSE <port> # exposing port to container
+ RUN pip install selenium # runs code to install ,export etc (everything the program(main.py) will need)
+ *
+ ENTRYPOINT ["python main.py"] # unlike CMD it cant be overwritten and will always run
+ ** using togheter with cmd
+ ENTRYPOINT ["python"]
+ CMD ["main.py"]  # you cant overwrite entrypoint but cmd can ("main2.py" etc)
+ 
  
  
 
