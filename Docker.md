@@ -58,8 +58,17 @@ docker image prune # to remove all dangling images
 ```
 
 ## Dockercompose
+Installing
+```Bash
+sudo apt install docker-compose -y
+```
+Create folder for Docker-compose
+And create file called **docker-compose.yaml**
+```Bash
+docker-compose up
 
-## Volume
+
+
 
 ## Dockerhub
 To be able to interact you need to login
